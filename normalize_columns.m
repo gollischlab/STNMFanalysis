@@ -21,6 +21,7 @@
 
 function B = normalize_columns( A )
 % function to normalize every column of the matrix A to unit Euclidean norm and return as a matrix B
-[Nrows,Ncolumns] = size(A);
-C=1./sqrt(sum(A.*A,1));
-B = A .* repmat( C, Nrows, 1 );
+    [Nrows,Ncolumns] = size(A);
+    C=1./sqrt(sum(A.*A,1));
+    B = A .* repmat( C, Nrows, 1 );
+end
